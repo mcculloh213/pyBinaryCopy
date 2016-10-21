@@ -16,7 +16,7 @@ def copy(f_in):
     try:
         with open(f_in, 'rb', 0) as f:                       # Open the input file in binary read mode
             while True:
-                line = f.read(2)                             # Read a line the binary file word by word (2 bytes)
+                line = f.read(1000)                          # Read 1000 bytes of a line in the binary file
                 if not line:                                 # If the line is empty
                     break                                    # EOF
                 hexi = binascii.hexlify(line)                # Convert the line into hex
